@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class StoreDataApp {
     private static Scanner scanner = new Scanner(System.in, "UTF-8");
-    private static FileRepo fileRepo = new FileRepo();
-    private  static  DBRepo dbRepo = new DBRepo();
+    private static Repo repo; //nie moze miec instancji tylko referncje
+
     public static void main(String[] args) {
 
         int option;
@@ -32,10 +32,12 @@ public class StoreDataApp {
     private static void saveText(int option, String text) {
         switch (option) {
             case 1:
-                fileRepo.save(text);
+                repo = new FileRepo(); // tu incajalizujemy
+               repo.save(text);
                 break;
             case 2:
-                dbRepo.save(text);
+                repo = new DBRepo();
+                repo.save(text);
                 break;
         }
     }
