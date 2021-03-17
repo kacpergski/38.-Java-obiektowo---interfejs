@@ -1,3 +1,5 @@
+package pl.kacpergski;
+
 public class FileRepo implements Repo{
 @Override
     public void save (String text){

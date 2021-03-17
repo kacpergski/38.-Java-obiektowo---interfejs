@@ -1,3 +1,5 @@
+package pl.kacpergski;
+
 public class DBRepo implements Repo {
     @Override
     public void save (String text){

@@ -1,3 +1,5 @@
+package pl.kacpergski;
+
 import java.util.Scanner;
 
 public class StoreDataApp {
